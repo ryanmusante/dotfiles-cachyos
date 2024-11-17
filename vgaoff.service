@@ -1,0 +1,9 @@
+[Unit]
+Description=Power-off gpu
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'echo 1 >/sys/devices/pci0000:00/0000:00:02.0/remove'
+
+[Install]
+WantedBy=multi-user.target
